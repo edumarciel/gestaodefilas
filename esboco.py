@@ -10,7 +10,7 @@ data = datetime.datetime.now()
 #LISTA PARA SENHAS
 convencional = []
 preferencial = []
-
+caixas = ['001','002','003','004','005']
 
 #MENU OPCIONAL
 def Menu():
@@ -141,7 +141,11 @@ def ImprimirPreferencial():
         os.system("cls")
 
 #PAINEL DE CONTROLE
-
+def Acompanhamento():
+    for atend in convencional:
+        if 'CXC' in atend:
+            print (f"SENHA: {atend}")
+            print (f"CAIXA: {random.choice(caixas)}")
 
 #FIM DO PROGRAMA            
 opcao=1
